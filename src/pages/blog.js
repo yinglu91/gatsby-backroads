@@ -2,9 +2,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 
-export default () => (
+const blog = () => {
+  return (
     <Layout>
-      Hello from backroad!
+      hello from blog page <Link to="/">back home</Link>
     </Layout>
+  )
+}
 
-)
+export default blog
