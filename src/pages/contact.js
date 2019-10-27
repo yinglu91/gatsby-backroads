@@ -6,9 +6,7 @@ import Contact from '../components/Contact/Contact'
 
 export default function contact({data}) {
   return <Layout>
-    <StyledHero img={data.contactBcg.childImageSharp.fluid}>
-
-    </StyledHero>
+    <StyledHero img={data.contactBcg.childImageSharp.fluid} />
     <Contact />
     </Layout>
 }
