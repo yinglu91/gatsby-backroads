@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../../css/item.module.css'
+import styles from '../../css/items.module.css'
 import Tour from './Tour'
 import Title from '../../components/Title'
 
