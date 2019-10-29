@@ -20,6 +20,14 @@ export default class TourList extends Component {
         return (
             <section className={styles.tours}>
                 <Title title="our" subtitle="tours" />
+
+                <div className={styles.center}>
+                {
+                    this.state.soutedTours.map(({node}) => (
+                        <Tour key={node.id} tour={node} />
+                    ))
+                }
+                </div>
             </section>
         )
     }
