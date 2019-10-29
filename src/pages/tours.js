@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../components/Layout'
 import { Link } from 'gatsby'
 import StyledHero from '../components/StyledHero'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import Tours from '../components/Tours/Tours'
 
 export default class tours extends Component {
@@ -10,7 +10,7 @@ export default class tours extends Component {
     return (
       <Layout>
         <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
-        <Tours />  
+        <Tours />
       </Layout>
     )
   }
@@ -18,7 +18,7 @@ export default class tours extends Component {
 
 export const query = graphql`
   query {
-    defaultBcg: file(relativePath: {eq: "defaultBcg.jpeg"}) {
+    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_tracedSVG

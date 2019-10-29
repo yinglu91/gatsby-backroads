@@ -1,9 +1,9 @@
 import React from 'react'
 import TourList from './TourList'
-import {useStaticQuery, graphql} from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const getTours = graphql`
-query {
+  query {
     tours: allContentfulTour {
       edges {
         node {
@@ -25,13 +25,9 @@ query {
 `
 
 const Tours = () => {
-    const {tours} = useStaticQuery(getTours)
+  const { tours } = useStaticQuery(getTours)
 
-    return (
-        
-            <TourList tours={tours} />
-       
-    )
+  return <TourList tours={tours} />
 }
 
 export default Tours
