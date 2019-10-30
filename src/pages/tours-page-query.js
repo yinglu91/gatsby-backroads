@@ -4,8 +4,6 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 
 const toursPageQuery = ({ data }) => {
-  console.log(data)
-
   const { siteMetadata } = data.site
 
   return (

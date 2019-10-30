@@ -20,6 +20,9 @@
   line-height: 2;
   transition: var(--mainTransition);
 }
+.template {
+  font-size: 1.5rem;
+}
 @media screen and (min-width: 992px) {
   .day h4 {
     width: 400px;

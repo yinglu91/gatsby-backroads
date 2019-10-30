@@ -22,7 +22,6 @@ const RegularHeader = () => {
     <StaticQuery
       query={getSiteData}
       render={({ site: { siteMetadata } }) => {
-        console.log(siteMetadata)
         return (
           <div>
             <h1>title:{siteMetadata.title}</h1>
