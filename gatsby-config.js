@@ -8,12 +8,12 @@ module.exports = {
     description:
       'Explore awesome worldwie tours & discover what makes each of them unique. forget your     daily routine& say yes to the adventure',
     author: '@johndoe',
-    data: {
-      name: 'john',
-      age: 24,
-    },
+    twitterUsername: '@john_smilga',
+    image: '/defaultBcg.jpeg',
+    siteUrl: 'https://gatsby-backroad-project.netlify.com',
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
