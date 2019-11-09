@@ -9,6 +9,14 @@ import Title from '../components/Title'
 const BlogListTemplate = props => {
   console.log(props)
   const { currentPages, numPages } = props.pageContext
+
+  const isFirst = currentPages === 1
+  const isLast = currentPages === numPages
+
+  const prevPage =
+    currentPages - 1 === 1 ? `/blogs/` : `/blogs/${currentPages - 1}`
+  const nextPage = `/blogs/${currentPages + 1}`
+
   const { data } = props
 
   return (
@@ -22,6 +30,12 @@ const BlogListTemplate = props => {
         </div>
 
         <section className={styles.links}>
+          {!isFirst && (
+            <AniLink fade to={prevPage} className={styles.link}>
+              Prev
+            </AniLink>
+          )}
+
           {Array.from({ length: numPages }, (_, i) => {
             return (
               <AniLink
@@ -38,6 +52,12 @@ const BlogListTemplate = props => {
               </AniLink>
             )
           })}
+
+          {!isLast && (
+            <AniLink fade to={nextPage} className={styles.link}>
+              Next
+            </AniLink>
+          )}
         </section>
       </section>
     </Layout>
