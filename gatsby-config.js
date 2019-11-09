@@ -11,6 +11,9 @@ module.exports = {
     twitterUsername: '@john_smilga',
     image: '/defaultBcg.jpeg',
     siteUrl: 'https://gatsby-backroad-project.netlify.com',
+    data: {
+      age: 19,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
