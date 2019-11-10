@@ -10,13 +10,14 @@ module.exports = {
     author: '@johndoe',
     twitterUsername: '@john_smilga',
     image: '/defaultBcg.jpeg',
-    siteUrl: 'https://gatsby-backroad-project.netlify.com',
+    siteUrl: 'https://gatsby-backroads-yyyyy.netlify.com',
     data: {
       age: 19,
     },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,6 +32,14 @@ module.exports = {
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://gatsby-backroads-yyyyy.netlify.com',
+        sitemap: 'https://gatsby-backroads-yyyyy.netlify.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

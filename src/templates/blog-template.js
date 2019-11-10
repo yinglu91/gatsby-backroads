@@ -33,7 +33,7 @@ const BlogTemplate = ({ data }) => {
             <img
               width="400"
               src={image['en-US'].fields.file['en-US'].url}
-              alt=""
+              alt="image"
             />
             {documentToReactComponents(text['en-US'])}
           </div>
